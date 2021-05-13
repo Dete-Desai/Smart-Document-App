@@ -19,12 +19,15 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 
-<key>NSPhotoLibraryUsageDescription</key>
-<string>describe why your app needs permission for the photo library</string>
-<key>NSCameraUsageDescription</key>
-<string>describe why your appp needs access to the camera.</string>
-<key>NSMicrophoneUsageDescription</key>
-<string>describe why you app needs access to the microphone</string>
+    //Allowing application to access files and hardware 
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Allow access to photo library</string>
+
+    <key>NSCameraUsageDescription</key>
+    <string>Allow access to camera to capture photos</string>
+
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Allow access to microphone</string>
 
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>

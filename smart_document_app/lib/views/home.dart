@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_document_app/views/upload_document.dart';
+import 'package:smart_document_app/views/upload_image.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -34,15 +35,27 @@ class _HomePageState extends State<HomePage> {
       body: Container(),
       floatingActionButton: Container(
         padding: EdgeInsets.symmetric(vertical: 20),
-        child: Row(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
+            Padding(padding: EdgeInsets.symmetric(vertical: 10)),
             FloatingActionButton(
+              heroTag: "btn1",
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => UploadDocument()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => UploadImage()));
               },
-              child: Icon(Icons.add),
-            )
+              child: Icon(Icons.image),
+            ),
+            Padding(padding: EdgeInsets.symmetric(vertical: 10)),
+            FloatingActionButton(
+              heroTag: "btn2",
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => UploadDocument()));
+              },
+              child: Icon(Icons.folder_shared_rounded),
+            ),
           ],
         ),
       ),
